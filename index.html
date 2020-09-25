@@ -10,26 +10,16 @@
 </head>
 
 <body>
-  <form onsubmit="return doFormSubmit();" class="my-form"">
+  
     <label for="AlliedInfantryTextBox">Allied Infantry:</label>
     <input type="text" id="AlliedInfantryTextBox" name="alliedInfantry"><br><br>
     <label for="AxisInfantryTextBox">Axis Infantry:</label>
     <input type="text" id="AxisInfantryTextBox" name="axisInfantry"><br><br>
     <h1 id="Output">Result: </h1> <br> 
-    <input type="submit" value="Submit">
-  </form>
-
+    <button type="button" id="battleButton">Do Battle!</button>
+  
+<script src="home.js"></script>
 <script src="utils.js"></script>
-<script>
-  function doFormSubmit() {
-    // We don't want to post and refresh.  We just want to invoke a js function.
-    // So invoke the function and return false to indicate that we shouldn't submit.
-    // Without the return false, the message will update but immediately be
-    // Overwritten.
-    runSimulation()
-    return false;
-  }
-</script>
 
 </body>
 
